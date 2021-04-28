@@ -1,14 +1,17 @@
-#Arduino ( UNO/nano) communication to PC(Win10/Ubuntu) over pyserial example.
-#Init array, count avergage, write to 'dataFile.txt'
-#Init to Arduino boards arduinoCharInput.ino before.
+"""
+Arduino ( UNO/nano) communication to PC(Win10/Ubuntu) over pyserial example.
+Init array, count avergage, write to 'dataFile.txt'
+Init to Arduino boards arduinoFreeCom.ino before.
+"""
 import serial
 import time
 
 #Ubuntu establish connection on a specific port:
 #ser = serial.Serial('/dev/tty.usbmodem1d03', baudrate=9600, timeout=1)
+
 # Win10 establish connection on a specific port:
 ser = serial.Serial('COM12', baudrate=9600, timeout=1)
-time.sleep(1)
+time.sleep(2)
 
 numPoints = 10
 dataList = [0]*numPoints

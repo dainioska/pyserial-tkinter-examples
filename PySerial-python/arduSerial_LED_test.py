@@ -1,9 +1,12 @@
-# test LED "on/off" from Pycharm terminal window over Pyserial
-# LED_default.ino from arduino
+"""
+test LED "on/off" from Pycharm terminal window over Pyserial
+LED_default.ino from arduino
+"""
 import serial
 import time
 
-arduino = serial.Serial('COM3', baudrate=9600, timeout=1)
+# arduino = serial.Serial('COM3', baudrate=9600, timeout=1)
+arduino = serial.Serial("/dev/ttyUSB0", 9600)
 time.sleep(2)
 
 print(arduino.readline())

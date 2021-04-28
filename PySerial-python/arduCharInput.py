@@ -1,7 +1,8 @@
 import serial
 import time
 
-ser = serial.Serial('COM12', baudrate=9600, timeout=1)
+# ser = serial.Serial('COM12', baudrate=9600, timeout=1)
+ser = serial.Serial("/dev/ttyUSB0", 9600)
 time.sleep(1)
 
 

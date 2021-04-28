@@ -2,7 +2,7 @@ import serial
 import time
 
 ser = serial.Serial('COM12', baudrate=9600, timeout=1)
-time.sleep(1)
+time.sleep(2)
 numPoints = 10
 dataList = [0]*numPoints
 dataFile = open('dataFile.txt', 'w')

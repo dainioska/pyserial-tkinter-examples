@@ -1,10 +1,13 @@
-# example show Pyserial TEST String sent to ardu (while)
-# test LaserTag 2021-04-08
+"""
+example show Pyserial TEST String sent to ardu (while)
+test LaserTag 2021-04-08
+"""
 import serial
 import time
 
-arduino = serial.Serial('COM12', baudrate=9600)
-time.sleep(3)
+# arduino = serial.Serial('COM12', baudrate=9600)
+arduino = serial.Serial("/dev/ttyUSB0", 9600)
+time.sleep(2)
 
 xx = 10  # -- x pos min
 yy = 10  # -- y pos min

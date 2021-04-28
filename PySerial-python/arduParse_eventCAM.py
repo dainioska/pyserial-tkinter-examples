@@ -1,10 +1,13 @@
-# example show VIDEO-CAP mouse click_event sent like intParse to ardu
-# test LaserTag 2021-04-08
+"""
+example show VIDEO-CAP mouse click_event sent like intParse to ardu
+test LaserTag 2021-04-08
+"""
 import serial
 import time
 import cv2
 
-arduino = serial.Serial('COM12', baudrate=9600, timeout=1)
+# arduino = serial.Serial('COM12', baudrate=9600, timeout=1)
+arduino = serial.Serial("/dev/ttyUSB0", 9600)
 time.sleep(2)
 cap = cv2.VideoCapture(0)
 
